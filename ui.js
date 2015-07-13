@@ -89,8 +89,7 @@ function showResult(courses, arithmeticAvg, weightAvg, gpaResult, semestersRecor
             var newBar = document.createElement('div');
             newBar.className = "bar";
             newBar.setAttribute("style", "display:block;width:" + (gpa / 4.3) * 100 + "%");
-            //newBar.setAttribute('innerHTML', gpa);
-            newBar.innerHTML = gpa.toFixed(2);
+            newBar.innerHTML = name.substring(0, 4) + name[5] + "&nbsp;&nbsp;" +  + gpa.toFixed(2);
             var clearDiv = document.createElement('div');
             clearDiv.setAttribute("style", "clear:both;");
             graph.appendChild(newBar);

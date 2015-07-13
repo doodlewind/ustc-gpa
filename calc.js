@@ -30,7 +30,8 @@ function calculate() {
     showResult(courses, arithmeticAvg, weightAvg, gpaResult, semestersRecord);
     function initCourses() {
         for (var i = 0; i < rawLines.length; i++) {
-            var rawLine = rawLines[i].split('\t');
+            var rawLine = rawLines[i].replace(/\t/g, ' ').split(' ');
+            rawLine.clean("");
             if (rawLine.length == 8 && rawLine[0][0] == '2') {
                 var tmpCourse = {
                     'semester': rawLine[0],
@@ -175,13 +176,13 @@ function calculate() {
             'A': {'high': 94, 'mid': 92.5, 'low': 90},
             'A-': {'high': 89, 'mid': 87.5, 'low': 85},
             'B+': {'high': 84, 'mid': 83.5, 'low': 82},
-            'B': {'high': 81, 'mid':80.5, 'low': 78},
+            'B': {'high': 81, 'mid': 80, 'low': 78},
             'B-': {'high': 77, 'mid': 76.5, 'low': 75},
-            'C+': {'high': 74, 'mid': 73.5, 'low': 72},
+            'C+': {'high': 74, 'mid': 73, 'low': 72},
             'C': {'high': 71, 'mid': 69.5, 'low': 68},
-            'C-': {'high': 67, 'mid': 66.5, 'low': 65},
+            'C-': {'high': 67, 'mid': 66, 'low': 65},
             'D+': {'high': 64, 'mid': 64, 'low': 64},
-            'D': {'high': 63, 'mid': 62.5, 'low': 61},
+            'D': {'high': 63, 'mid': 62, 'low': 61},
             'D-': {'high': 60, 'mid': 60, 'low': 60},
             'F': {'high': 0, 'mid': 0, 'low': 0}
         };

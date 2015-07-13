@@ -52,6 +52,7 @@ button {
     text-align: center;
     font-size: 1rem;
     border: 1px deepskyblue solid;
+    background-color: transparent;
 }
 button:hover {
     background-color: deepskyblue;
@@ -84,6 +85,7 @@ hr {
     width: 100%;
     border: 0;
     margin-top: 0;
+    margin-bottom: 0;
     max-width: 100%;
     border-left: 1px deepskyblue solid;
     padding-left: 1rem;
@@ -112,4 +114,21 @@ hr {
     box-sizing: border-box;
     height: 1rem;
     background-color: deepskyblue;
+}
+footer {
+    margin-top: 1rem;
+    clear: left;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 0;
+    border-top: 1px deepskyblue solid;
+}
+footer > a {
+    display: block;
+    padding-top: 0.5rem;
+    color: deepskyblue;
+    font-family: "AgencyFB", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
 }
