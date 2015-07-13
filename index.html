@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name=”apple-mobile-web-app-status-bar-style” content=”black-translucent”>
+    <meta name="format-detection" content="telephone=no">
+    <title>USTC GPA Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?0c03015fa70ade4755d736d9eb21f265";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<h1>USTC GPA Calculator</h1>
+<div id="main">
+    <table>
+        <thead class="option">
+            <td>Failed Credits</td>
+            <td>Score for 5 Grades</td>
+            <td>Score for 2 Grades</td>
+        </thead>
+        <tr>
+            <td><button id="count-not-passed">Include</button></td>
+            <td><button id="score-5-grade">Mid</button></td>
+                <td><button id="score-2-grade">Ignore</button></td>
+        </tr>
+    </table>
+    <div class="sheet">
+        <textarea id="input" placeholder="Just COPY grade table from mis.teach.ustc and PASTE here." oninput="calculate();"></textarea>
+    </div>
+    <div id="result" hidden>
+        <table class="table-result">
+            <thead>
+                <td>Typical 4.0</td>
+                <td>Improved 4.0 - 1</td>
+                <td>Improved 4.0 - 2</td>
+                <td>PKU 4.0</td>
+                <td>Canada 4.3</td>
+                <td>USTC 4.3</td>
+                <td>SJTU 4.3</td>
+            </thead>
+            <tr>
+                <td id="typical-4.0"></td>
+                <td id="improved-4.0-1"></td>
+                <td id="improved-4.0-2"></td>
+                <td id="pku-4.0"></td>
+                <td id="canada-4.3"></td>
+                <td id="ustc-4.3"></td>
+                <td id="sjtu-4.3"></td>
+            </tr>
+        </table>
+        <hr>
+        <table class="table-result">
+            <thead><td>Arithmetic average</td><td>Weighted average</td></thead><tr><td id="arithmetic-avg"></td><td id="weighted-avg"></td></tr>
+        </table>
+        <hr>
+    </div>
+    <div id="result-graph" hidden>
+        <h2>Semester GPA</h2><hr>
+        <div id="graph"></div>
+    </div>
+    <div id="result-list" hidden>
+        <h2>* All Calculated from below</h2><hr>
+        <textarea id="log" disabled></textarea>
+    </div>
+    <div></div>
+</div>
+<script src="ui.js"></script>
+<script src="calc.js"></script>
+</body>
+</html>
