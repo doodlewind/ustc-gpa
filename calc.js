@@ -43,7 +43,10 @@ function calculate() {
                     'status': rawLine[7]
                 };
                 // remove courses that is abandoned or special courses
-                if (tmpCourse['score'] === '放弃' || tmpCourse['type'] === "") {
+                if (tmpCourse['score'] === '放弃'
+                    || tmpCourse['status'] === '放弃'
+                    || tmpCourse['status'] === '覆盖'
+                    || tmpCourse['type'] === "") {
                     continue;
                 }
                 courses.push(tmpCourse);
